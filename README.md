@@ -1,0 +1,2 @@
+# DRYBot
+Discord Rust Bot 

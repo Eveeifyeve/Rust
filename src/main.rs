@@ -1,34 +1,8 @@
 use anyhow::anyhow;
-use serenity::async_trait;
-use serenity::model::channel::Message;
-use serenity::model::gateway::Ready;
 use serenity::prelude::*;
 use shuttle_secrets::SecretStore;
-use tracing::{error, info};
+mod eventhandler;
 
-struct Bot;
-
-#[async_trait]
-impl EventHandler for Bot {
-    async fn message(&self, ctx: Context, msg: Message) {
-        if msg.content == "!botinfo" {
-            if let Err(e) = msg.channel_id.say(&ctx.http, "This bot is made by eveeify LICENCED UNDER MIT").await {
-                error!("Error sending message: {:?}", e);
-            }
-        }
-    }
-
-    async fn ready(&self, _: Context, ready: Ready, secret_store: SecretStore) {
-        info!("{} is connected!", ready.user.name);
-
-        GuildId::set_application_commands(&guild_id, &ctx.http, |commands| {
-            commands.create_application_command(|command| { command.name("botinfo").description("gives you the bot info") })
-        }).await.unwrap();
-
-    }
-}
-
-async fn interactionCreate()
 
 #[shuttle_runtime::main]
 async fn serenity(
@@ -45,7 +19,7 @@ async fn serenity(
     let intents = GatewayIntents::GUILD_MESSAGES | GatewayIntents::MESSAGE_CONTENT;
 
     let client = Client::builder(&token, intents)
-        .event_handler(Bot)
+        .event_handler(eventhandler::Bot)
         .await
         .expect("Err creating client");
 

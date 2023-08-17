@@ -1,5 +1,7 @@
 # Discord RUST BOT
 
+
+![Divider 1](assets/docs/dividers.png)
 In this example we will deploy a Serenity bot with Shuttle. To run this bot we need a valid Discord Token. To get started log in to the [Discord developer portal](https://discord.com/developers/applications).
 
 1. Click the New Application button, name your application and click Create.
@@ -14,7 +16,7 @@ To add the bot to a server we need to create an invite link.
 3. Copy the URL, open it in your browser and select a Discord server you wish to invite the bot to.
 
 For more information please refer to the [Discord docs](https://discord.com/developers/docs/getting-started) as well as the [Serenity repo](https://github.com/serenity-rs/serenity) for more examples.
-
+![Divider 1](assets/docs/dividers.png)
 
 
 

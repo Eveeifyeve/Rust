@@ -12,6 +12,24 @@ use serenity::builder::CreateEmbed;
 
 pub struct Bot; // Make Bot public
 
+
+impl Bot {
+    pub fn create_botinfo_embed() -> CreateEmbed {
+        let mut embed = CreateEmbed::default();
+        embed.title("Bot Info");
+        embed.description("This bot is made by eveeify LICENCED UNDER MIT");
+        embed.color(0xff6c00);
+        embed.author(|a| {
+            a.name("eveeify");
+            a
+        });
+        embed
+    }
+
+
+}
+
+
 #[async_trait]
 impl EventHandler for Bot {
 
@@ -38,29 +56,14 @@ impl EventHandler for Bot {
     //bot info command
 
 
-    fn create_botinfo_embed() -> CreateEmbed {
-        let mut embed = CreateEmbed::default();
-        embed.title("Bot Info");
-        embed.description("This bot is made by eveeify LICENCED UNDER MIT");
-        embed.color(0xff6c00);
-        embed.author(|a| {
-            a.name("eveeify");
-            a
-        });
-        embed
-    }
+
 
     // - - - - - - - - - -- - - - - - - - - --  - - - - - -
 
-
     async fn interaction_create(&self, ctx: Context, interaction: Interaction) {
-        
-
-
-        async fn interaction_create(&self, ctx: Context, interaction: Interaction) {
-            if let Interaction::ApplicationCommand(command) = interaction {
+        if let Interaction::ApplicationCommand(command) = interaction {
                 let content = match command.data.name.as_str() {
-                    "botinfo" => Some(create_botinfo_embed()),
+                    "botinfo" => Some(Self::create_botinfo_embed()),
                     _ => None,
                 };
     
@@ -78,7 +81,6 @@ impl EventHandler for Bot {
                 }
             }
         }
-    }
 
 
 // - - - - - - - - - -- - - - - - - - - --  - - - - - -
@@ -90,11 +92,17 @@ impl EventHandler for Bot {
 
 
 
-    async fn ready(&self, ctx: Context, ready: Ready) {
+
+
+     // Replace This with your SERVER ID/GUILD ID. Read the Readme for a step by step guide. 
+
+
+
+
+    async fn ready(&self, _ctx: Context, ready: Ready) {
         info!("{} is connected!", ready.user.name);
 
         // guild only commands
-        // let guild_id = GuildId(); // Replace This with your SERVER ID/GUILD ID. Read the Readme for a step by step guide. 
     } 
 
 

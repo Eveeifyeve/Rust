@@ -1,7 +1,9 @@
+mod eventhandler;
+
 use anyhow::anyhow;
 use serenity::prelude::*;
 use shuttle_secrets::SecretStore;
-mod eventhandler;
+use eventhandler::Bot;
 
 
 #[shuttle_runtime::main]
@@ -17,9 +19,8 @@ async fn serenity(
 
     // Set gateway intents, which decides what events the bot will be notified about
     let intents = GatewayIntents::GUILD_MESSAGES | GatewayIntents::MESSAGE_CONTENT;
-
     let client = Client::builder(&token, intents)
-        .event_handler(eventhandler::Bot)
+        .event_handler(Bot)
         .await
         .expect("Err creating client");
 

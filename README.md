@@ -1,6 +1,6 @@
 # Discord RUST BOT
 <!-- Divider Color ff6c00 -->
-** Not Working! **
+
 
 
 ![Divider 1](assets/docs/dividers.png)

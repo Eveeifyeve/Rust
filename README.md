@@ -17,6 +17,17 @@ To add the bot to a server we need to create an invite link.
 2. Go to the URL Generator via the lefthand panel, and select the `Bot` scope as well as the `Application commands` permission in the Bot Permissions section.
 3. Copy the URL, open it in your browser and select a Discord server you wish to invite the bot to.
 
+To Run/Deploying the Discord bot 
+
+1. With testing you can use bash```
+cargo-shuttle run
+``` to run locally 
+
+2. Deploying use bash
+```bash
+cargo-shuttle 
+```
+
 For more information please refer to the [Discord docs](https://discord.com/developers/docs/getting-started) as well as the [Serenity repo](https://github.com/serenity-rs/serenity) for more examples.
 ![Divider 1](assets/docs/dividers.png)
 

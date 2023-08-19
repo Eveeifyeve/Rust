@@ -4,6 +4,7 @@
 
 
 ![Divider 1](assets/docs/dividers.png)
+
 # In this example we will deploy a Serenity bot with Shuttle. To run this bot we need a valid Discord Token. To get started log in to the [Discord developer portal](https://discord.com/developers/applications).
 
 1. Click the New Application button, name your application and click Create.

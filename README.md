@@ -14,7 +14,7 @@
 3. On the bot page click the Reset Token button to reveal your token. Put this token in your `Secrets.toml` by making a file and using the [exsample](./Secrets.toml%20exsample). It's very important that you don't reveal your token to anyone, as it can be abused.
 4. For the sake of this example, you also need to scroll down on the bot page to the Message Content Intent section and enable that option.
 
-<h1>To add the bot to a server we need to create an invite link.</h1>
+<h3>To add the bot to a server we need to create an invite link.</h3>
 
 
 1. On your bot's application page, open the OAuth2 page via the lefthand panel.
@@ -22,7 +22,7 @@
 3. Copy the URL, open it in your browser and select a Discord server you wish to invite the bot to.
 
 
-<h1>To Run/Deploying the Discord bot</h1>
+<h3>To Run/Deploying the Discord bot</h3>
 
 **Comming Soon**
 

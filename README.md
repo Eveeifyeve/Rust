@@ -1,4 +1,4 @@
-# Discord RUST BOT
+# eveeify's Rust CordBot
 <!-- Divider Color ff6c00 -->
 
 

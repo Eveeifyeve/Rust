@@ -25,7 +25,8 @@
 <h3>To Run/Deploying the Discord bot</h3>
 
 **Comming Soon**
-
+<br>
+<br>
 For more information please refer to the [Discord docs](https://discord.com/developers/docs/getting-started) as well as the [Serenity repo](https://github.com/serenity-rs/serenity) for more examples.
 ![Divider 1](assets/docs/dividers.png)
 

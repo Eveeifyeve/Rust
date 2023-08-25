@@ -1,4 +1,4 @@
-# Eveeify's Rust CordBot
+# Cordevall.RS
 <!-- Divider Color ff6c00 -->
 
 

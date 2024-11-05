@@ -1,11 +1,7 @@
 mod commands;
-mod errors;
-mod pages;
-mod server;
-
-use std::thread;
 
 use poise::serenity_prelude as serenity;
+use std::thread;
 struct Data {}
 type Error = Box<dyn std::error::Error + Send + Sync>;
 type Context<'a> = poise::Context<'a, Data, Error>;

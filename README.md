@@ -11,36 +11,42 @@
 - Both SlashCommand And PrefixCommands
 
 ![Divider][CustomDivider]
+ 
+# Getting Started
 
-### In this example we will deploy a Serenity bot with Shuttle. To run this bot we need a valid Discord Token. To get started log in to the [Discord developer portal][Discord App].
+Get Started by creating a new discord application and adding the bot to a server.
 
-1. Click the New Application button, name your application and click Create.  
-2. Navigate to the Bot tab in the lefthand menu, and add a new bot.  
-3. On the bot page click the Reset Token button to reveal your token.  
-4. Put this token in your `secrets.toml` by making a file and using the [exsample](Example.Secrets.toml).  
-5. It's very important that you don't reveal your token to anyone, as it can be abused.  
-6. You might also need to scroll down on the bot page to the Privileged Gateway Intents section and enable all options.  
+1. Add The Following Credentials to your `.env` by making a file and using the [exsample](.env.example).
+2. It's very important that you don't reveal your token & clientSecret to anyone, as it can be abused.
+3. Run the discord bot with `cargo run` if getting errors, try going through steps 1 and 2 again.
+4. Now you have a discord bot! You can manage it by going to the portal on localhost:3000.
 
-### To add the bot to a server we need to create an invite link.
+# Contributing
 
-1. On your bot's application page, open the OAuth2 page via the lefthand panel.  
-2. Go to the URL Generator via the lefthand panel.  
-3. Select the `Bot` scope as well as the `Application commands` permission in the Bot Permissions section.  
-4. Copy the URL.   
-5. Open it in your browser, Select a Discord server you wish to invite the bot to.
+First of all thank you for taking the time to contribute! ❤️
 
-### To Run/Deploying the Discord bot
 
-![Divider][CustomDivider]
+## Creating a Pull Request
 
-For more information please refer to the [Discord docs](https://discord.com/developers/docs/getting-started) as well as the [Serenity repo][Serenity] for more examples.
+1. Fork the repository and clone your fork.
+2. Create a new branch: `git checkout -b my-feature-or-fix`.
+3. Make your changes.
+4. Commit your changes: `git commit -m 'type(scope): my feature or fix details'`.
+5. Push to the branch: `git push`.
+6. Submit a pull request by using the GH Web Interface or `gh pr create`.
+
+## Style Guidelines
+
+- For Commits, please follow the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) guidelines.
+- Please format your code with `cargo fmt`.
+- Please don't use spaces for indentation, use tabs instead.
 
 # Publishing to github
 
-When you publish you must follow the [MIT Licence](./LICENSE) and include it.  
+When you publish you must follow the [BSD-3-Clause Licence](./LICENSE) and include it.
 And please **Star this Template** we are people who are doing this for free, not for work it means **WE DON'T GET PAID**.
 
 [Discord docs]: https://discord.com/developers/docs/getting-started
 [Serenity]: https://github.com/serenity-rs/serenity
 [Discord App]: https://discord.com/developers/applications
-[CustomDivider]: assets/docs/dividers.png
+[CustomDivider]: .github/assets/dividers.png

@@ -1,8 +1,18 @@
-### Output/Ge ###
+# Compiled Code
 /target
-.shuttle-storage
+
+
+# MacOS Specific Files
 .DS_Store
 
+# Enviroment Variables
+.env 
+.env.* 
+!.env.example
 
-### Ignore Secrets ###
-Secrets*.toml
+
+
+# Nix 
+/result
+.direnv 
+.devenv
